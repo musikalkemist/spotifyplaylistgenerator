@@ -9,12 +9,12 @@ from playlist import Playlist
 class SpotifyClient:
     """SpotifyClient performs operations using the Spotify API."""
 
-    def __init__(self, authorization_key, user_id):
+    def __init__(self, authorization_token, user_id):
         """
-        :param authorization_key (str): Spotify API token
+        :param authorization_token (str): Spotify API token
         :param user_id (str): Spotify user id
         """
-        self._authorization_key = authorization_key
+        self._authorization_token = authorization_token
         self._user_id = user_id
 
     def get_last_played_tracks(self, limit=10):
@@ -86,7 +86,7 @@ class SpotifyClient:
             url,
             headers={
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {self._authorization_key}"
+                "Authorization": f"Bearer {self._authorization_token}"
             }
         )
         return response
@@ -97,7 +97,7 @@ class SpotifyClient:
             data=data,
             headers={
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {self._authorization_key}"
+                "Authorization": f"Bearer {self._authorization_token}"
             }
         )
         return response
