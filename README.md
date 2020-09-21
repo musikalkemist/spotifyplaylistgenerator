@@ -4,7 +4,7 @@ A simple Python application to create custom Spotify playlists using the Spotify
 This is the source code for the "Create Spotify Playlists with Python" video on 
 The Sound of AI YouTube channel.
 
-Check out the video at: 
+Check out the video at: https://www.youtube.com/watch?v=3vvvjdmBoyc&list=PL-wATfeyAMNrTEgZyfF66TwejA0MRX7x1&index=2
 
 ## Install
 Install the necessary Python packages by running:
