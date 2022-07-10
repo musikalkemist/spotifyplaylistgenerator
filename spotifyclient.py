@@ -26,7 +26,6 @@ class SpotifyClient:
         url = f"https://api.spotify.com/v1/me/player/recently-played?limit={limit}"
         response = self._place_get_api_request(url)
         response_json = response.json()
-        print(response.json)
         tracks = [Track(track["track"]["name"], track["track"]["id"], track["track"]["artists"][0]["name"]) for
                   track in response_json["items"]]
         return tracks
