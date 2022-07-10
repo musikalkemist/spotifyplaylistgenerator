@@ -86,7 +86,8 @@ class SpotifyClient:
             url,
             headers={
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {self._authorization_token}"
+                "Authorization": f"Bearer {self._authorization_token}",
+                "Accept": "application/json"
             }
         )
         return response
